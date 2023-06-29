@@ -1,5 +1,5 @@
 <div align="center">
-   <img src="https://www.cryptocoinzone.com/wp-content/uploads/2021/11/Sandbox-SAND-logo.png" height="250"/>
+   <img src="https://www.cryptocoinzone.com/wp-content/uploads/2021/11/Sandbox-SAND-logo.png" height="200"/>
 </div>
 
 # expression-sandbox
