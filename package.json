@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "publish": "npm run build && npm publish --registry=https://registry.npmjs.org --access=public"
+    "publishToNpm": "npm run build && npm publish --registry=https://registry.npmjs.org --access=public"
   },
   "keywords": [
     "expression",
