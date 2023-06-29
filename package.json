@@ -1,0 +1,21 @@
+{
+  "name": "@potato/expression-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "expression",
+    "sandbox"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": "ziluo-tang",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
