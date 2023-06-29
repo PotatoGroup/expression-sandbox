@@ -8,7 +8,7 @@ export class Sandbox {
   constructor(options: Options) {
     this.options = options;
   }
-  private unscopeCompileCode(prefix: string = 'context', expression: string) {
+  private unscopeCompileCode(prefix: string = "context", expression: string) {
     return new Function(
       prefix,
       `with(${prefix}){
@@ -19,7 +19,9 @@ export class Sandbox {
   private scopeCompileCode(expression: string) {
     const fn = this.unscopeCompileCode(this.options.prefix, expression);
     return (sandbox: any) => {
-      const _target = this.options.prefix ? { [this.options.prefix]: sandbox } : sandbox;
+      const _target = this.options.prefix
+        ? { [this.options.prefix]: sandbox }
+        : sandbox;
       const proxy = new Proxy(_target, {
         // 拦截所有属性，防止到 Proxy 对象以外的作用域链查找
         has(target, key) {
@@ -31,7 +33,7 @@ export class Sandbox {
             return undefined;
           }
           return Reflect.get(target, key, receiver);
-        }
+        },
       });
       return fn(proxy);
     };
@@ -50,20 +52,22 @@ export class Sandbox {
       const match = it[0];
       const input = it.input;
       let ret = it[1];
-      if (!!it[1].trim()) {
+      if (!!ret.trim()) {
         ret = this.execute(ret);
-        ret = JSON.stringify(ret)
       }
       return {
         match,
         ret,
-        input
+        input,
       };
     });
     const retStr = retGroup.reduce((pre, cur) => {
-      const { match, ret, input } = cur;
+      const { match, ret } = cur;
+      if (match === expression) {
+        return ret;
+      }
       return pre.replace(match, ret);
-    }, expression)
+    }, expression);
     try {
       return JSON.parse(retStr);
     } catch (error) {
