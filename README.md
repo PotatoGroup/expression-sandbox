@@ -12,18 +12,18 @@ a simple sandbox for execute JS expression, support as follows:
 ## Install
 
 ```typeScript
-npm install @potato/expression-sandbox --save
+npm install @astii/expression-sandbox --save
 
 or
 
-yarn add @potato/expression-sandbox
+yarn add @astii/expression-sandbox
 
 ```
 
 ## Usage
 
 ```typeScript
-import { ExpressionSandbox } from '@potato/expression-sandbox'
+import { ExpressionSandbox } from '@astii/expression-sandbox'
 const context = {};
 const sandbox = new ExpressionSandbox({context});
 sandbox.executeWithTemplate(expression);  //execute expression with template

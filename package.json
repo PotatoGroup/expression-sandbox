@@ -1,5 +1,5 @@
 {
-  "name": "@potato/expression-sandbox",
+  "name": "@astii/expression-sandbox",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
