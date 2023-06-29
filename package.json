@@ -19,6 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/PotatoGroup/expression-sandbox.git"
   },
+  "homepage": "https://github.com/PotatoGroup/expression-sandbox#readme",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.1.6"
