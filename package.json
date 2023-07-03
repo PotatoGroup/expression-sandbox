@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "publishToNpm": "npm run build && npm publish --registry=https://registry.npmjs.org --access=public"

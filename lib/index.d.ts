@@ -1,1 +1,1 @@
-export { Sandbox as ExpressionSandbox } from "./sandbox";
+export { Sandbox as ExpressionSandbox, Options as SandboxOptions } from "./sandbox";

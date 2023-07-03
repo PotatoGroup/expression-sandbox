@@ -1,4 +1,4 @@
-type Options = Partial<{
+export type Options = Partial<{
     prefix: string;
     context: Record<string, any>;
 }>;
@@ -10,4 +10,3 @@ export declare class Sandbox {
     execute(expression: string): any;
     executeWithTemplate(expression: string): any;
 }
-export {};

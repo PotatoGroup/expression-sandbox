@@ -1,4 +1,4 @@
-type Options = Partial<{
+export type Options = Partial<{
   prefix: string;
   context: Record<string, any>;
 }>;
