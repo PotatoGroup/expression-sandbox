@@ -26,11 +26,11 @@ yarn add @astii/expression-sandbox
 import { ExpressionSandbox } from '@astii/expression-sandbox'
 const context = {};
 const sandbox = new ExpressionSandbox({context});
-sandbox.executeWithTemplate(expression);  //execute expression with template
+const ret = sandbox.executeWithTemplate(expression);  //execute expression with template
 
 or
 
-sandbox.execute(expression);  //execute expression without template
+const ret = sandbox.execute(expression);  //execute expression without template
 ```
 
 ## Template
