@@ -24,13 +24,15 @@ yarn add @astii/expression-sandbox
 
 ```typeScript
 import { ExpressionSandbox } from '@astii/expression-sandbox'
-const context = {};
+const context = { a: 1 };
+const expression = '{a}';
 const sandbox = new ExpressionSandbox({context});
-const ret = sandbox.executeWithTemplate(expression);  //execute expression with template
+const ret = sandbox.executeWithTemplate(expression);  //execute expression with template, ret: 1
 
 or
 
-const ret = sandbox.execute(expression);  //execute expression without template
+const expression = 'a'
+const ret = sandbox.execute(expression);  //execute expression without template, ret: 1
 ```
 
 ## Template
