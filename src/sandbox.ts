@@ -58,15 +58,15 @@ export class Sandbox {
       return {
         match,
         ret,
-        input,
+        input
       };
     });
     const retStr = retGroup.reduce((pre, cur) => {
       const { match, ret } = cur;
-      if (match === expression) {
+      if (match === expression && ret === undefined) {
         return ret;
       }
-      return pre.replace(match, ret);
+      return pre.replace(match, JSON.stringify(ret));
     }, expression);
     try {
       return JSON.parse(retStr);

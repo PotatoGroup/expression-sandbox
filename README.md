@@ -13,11 +13,10 @@ a simple sandbox for execute JS expression, support as follows:
 
 ```typeScript
 npm install @astii/expression-sandbox --save
-
+```
 or
-
+```typeScript
 yarn add @astii/expression-sandbox
-
 ```
 
 ## Usage
