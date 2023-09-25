@@ -58,15 +58,24 @@ export class Sandbox {
       return {
         match,
         ret,
-        input
+        input,
       };
     });
+    /**
+     * fix: string JSON.parse to number
+     */
+    if (retGroup.length === 1 && retGroup[0].input === retGroup[0].match) {
+      return retGroup[0].ret;
+    }
     const retStr = retGroup.reduce((pre, cur) => {
       const { match, ret } = cur;
       if (match === expression && ret === undefined) {
         return ret;
       }
-      return pre.replace(match, typeof ret === 'string' ? ret : JSON.stringify(ret));
+      return pre.replace(
+        match,
+        typeof ret === "string" ? ret : JSON.stringify(ret)
+      );
     }, expression);
     try {
       return JSON.parse(retStr);
